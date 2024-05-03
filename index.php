@@ -57,9 +57,9 @@ require_once __DIR__ . '/assets/data/db.php';
                       <p class="card-text"><?php echo $product->description ?></p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item bg-body-secondary"><strong>Category: </strong><?php echo $product->animal ?></li>
-                      <li class="list-group-item bg-body-secondary"><strong>Type: </strong><?php echo $product->type ?></li>
-                      <li class="list-group-item bg-body-secondary"><strong>Price: </strong>&euro; <?php echo $product->price ?></li>
+                      <li class="list-group-item bg-body-secondary"><strong>Categoria: </strong><?php echo $product->animal ?></li>
+                      <li class="list-group-item bg-body-secondary"><strong>Tipo: </strong><?php echo $product->type ?></li>
+                      <li class="list-group-item bg-body-secondary"><strong>Prezzo: </strong>&euro; <?php echo number_format($product->price, 2, ',') ?></li>
                     </ul>
                   </div>
 
