@@ -1,0 +1,26 @@
+/* utils */
+
+.cp{
+  cursor: pointer;
+}
+
+/* header */
+
+header .header-top{
+  height: 30px;
+  background-color: black;
+}
+
+header .header-bottom{
+  height: 120px;
+  background-color: #ffd500;
+}
+
+/* main */
+
+/* footer */
+
+footer{
+  height: 300px;
+  background-color: black;
+}
