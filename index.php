@@ -50,7 +50,7 @@ require_once __DIR__ . '/assets/data/db.php';
               <?php foreach ($db as $product) : ?>
                 <div class="col d-flex justify-content-center">
 
-                  <div class="card mb-5" style="width: 18rem;">
+                  <div class="card cp mb-5" style="width: 18rem;">
                     <img src="<?php echo $product->image ?>" class="card-img-top w-100 h-100 object-fit-contain " alt="<?php echo $product->name ?>">
                     <div class="card-body">
                       <h4 class="card-title"><?php echo $product->name ?></h4>
