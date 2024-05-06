@@ -23,6 +23,8 @@ foreach($toys as $item){
     $item->material = ['Gomma'];
   } elseif ($item->name === 'Frisbee in Gomma Naturale'){
     $item->material = ['Gomma'];
+  } elseif ($item->name === 'Tiragraffi Ottawa'){
+    $item->material = ['Lana'];
   }
 }
 foreach($accessories as $item){
@@ -30,6 +32,8 @@ foreach($accessories as $item){
     $item->material = ['Plastica', 'Legno'];
   } elseif ($item->name === 'Cappotto Impermeabile Montreal Grigio'){
     $item->material = ['Tela', 'Plastica'];
+  } elseif ($item->name === 'Ciotola Pieghevole in Silicone Blu'){
+    $item->material = ['Plastica'];
   }
 }
 
@@ -63,7 +67,7 @@ try{
         <?php if(count($foods) > 0): ?>
         <hr>
         <div class="col-4">
-          <h4 class="mb-4">Cibo</h4>
+          <h2 class="mb-4">Cibo</h2>
         </div>
         <?php endif ?>
 
@@ -112,7 +116,7 @@ try{
         <?php if(count($toys) > 0): ?>
           <hr>
           <div class="col-4">
-          <h4 class="mb-4">Giocattoli</h4>
+          <h2 class="mb-4">Giocattoli</h2>
         </div>
         <?php endif ?>
 
@@ -156,7 +160,7 @@ try{
         <?php if(count($accessories) > 0): ?>
         <hr>
         <div class="col-4">
-          <h4 class="mb-4">Accessori</h4>
+          <h2 class="mb-4">Accessori</h2>
         </div>
         <?php endif ?>
 
