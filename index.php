@@ -13,6 +13,23 @@ $toys = array_filter($db, fn($product)=> get_class($product) === 'Toy');
 
 $accessories = array_filter($db, fn($product)=> get_class($product) === 'Accessory');
 
+//assegno i valori al trait tramite foreach, invece di creare una nuova variabile
+
+foreach($toys as $item){
+  if ($item->name === 'Fit and Fun Osso'){
+    $item->material = ['Gomma'];
+  } elseif ($item->name === 'Frisbee in Gomma Naturale'){
+    $item->material = ['Gomma'];
+  }
+}
+foreach($accessories as $item){
+  if ($item->name === 'Ciotola Modern Bianca'){
+    $item->material = ['Plastica', 'Legno'];
+  } elseif ($item->name === 'Cappotto Impermeabile Montreal Grigio'){
+    $item->material = ['Tela', 'Plastica'];
+  }
+}
+
 require_once __DIR__ . '/partials/head.php';
 
 ?>
@@ -38,10 +55,6 @@ require_once __DIR__ . '/partials/head.php';
         <hr>
         <div class="col-4">
           <h4 class="mb-4">Cibo</h4>
-          <!-- <ul class="list-unstyled">
-            <li class="cp">Categoria</li>
-            <li class="cp">Sottocategoria</li>
-          </ul> -->
         </div>
         <?php endif ?>
 
@@ -91,10 +104,6 @@ require_once __DIR__ . '/partials/head.php';
           <hr>
           <div class="col-4">
           <h4 class="mb-4">Giocattoli</h4>
-          <!-- <ul class="list-unstyled">
-            <li class="cp">Categoria</li>
-            <li class="cp">Sottocategoria</li>
-          </ul> -->
         </div>
         <?php endif ?>
 
@@ -118,6 +127,7 @@ require_once __DIR__ . '/partials/head.php';
                       <li class="list-group-item bg-body-secondary"><strong>Dimensioni: </strong><?php echo $item->size ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Categoria: </strong><?php echo $item->category->name ?> <?php echo $item->category->icon ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Dettagli: </strong><?php echo $item->features ?></li>
+                      <li class="list-group-item bg-body-secondary"><strong>Materiali: </strong><?php $item->getFormatMaterial() ?></li>
                     </ul>
                   </div>
 
@@ -138,10 +148,6 @@ require_once __DIR__ . '/partials/head.php';
         <hr>
         <div class="col-4">
           <h4 class="mb-4">Accessori</h4>
-          <!-- <ul class="list-unstyled">
-            <li class="cp">Categoria</li>
-            <li class="cp">Sottocategoria</li>
-          </ul> -->
         </div>
         <?php endif ?>
 
@@ -164,6 +170,7 @@ require_once __DIR__ . '/partials/head.php';
                       <li class="list-group-item bg-body-secondary"><strong>Prezzo: </strong>&euro; <?php echo number_format($item->price, 2, ',') ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Dimensioni: </strong><?php echo $item->size ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Categoria: </strong><?php echo $item->category->name ?> <?php echo $item->category->icon ?></li>
+                      <li class="list-group-item bg-body-secondary"><strong>Materiali: </strong><?php $item->getFormatMaterial() ?></li>
                     </ul>
                   </div>
 
@@ -176,7 +183,7 @@ require_once __DIR__ . '/partials/head.php';
 
         </div>
 
-        <!-- accessori -->
+        <!-- /accessori -->
 
       </div>
 

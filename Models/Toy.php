@@ -1,5 +1,9 @@
 <?php
+
+require_once __DIR__ . '/Material.php';
 class Toy extends Product {
+
+  use Material;
 
   public $features;
   public $size;
