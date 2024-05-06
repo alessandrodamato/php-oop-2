@@ -1,10 +1,17 @@
 <?php
 
 $db = [
-  new Food('Cibo in scatola', 'Scatoletta', 2.99, 'https://m.media-amazon.com/images/I/71m+0DPJfKL._AC_UF894,1000_QL80_.jpg', new Category('Cani', '...'), 1000, ['...', '...'])
-  // new Product('Gatti', 'Cibo', 'Scatoletta di tonno', 'Cibo in scatola per gatti', 2.50, 'https://m.media-amazon.com/images/I/71m+0DPJfKL._AC_UF894,1000_QL80_.jpg'),
-  // new Product('Cani', 'Giochi', 'Pallina', 'Pallina da gioco adatta per i cani', 4.00, 'https://www.almulinoshop.it/image/cache/data/Ferplast/FER-PA6414-780x975.jpg'),
-  // new Product('Gatti', 'Cuccia', 'Cuccia di plastica', 'Prodotto realizzato interamente in plastica, misure 2x2 m', 25.00, 'https://cdn.manomano.com/images/images_products/5095106/P/11634105_1.jpg'),
-  // new Product('Cani', 'Cibo', 'Crocchette di pollo', 'Sacchetto da 2 kg di crocchette per cani', 6.99, 'https://ss-pics.s3.eu-west-1.amazonaws.com/files/2325863/page-CDS.jpg?1655560498'),
-  // new Product('Gatti', 'Giochi', 'Tiragraffi', 'Tiragraffi per gatti', 47.90, 'https://www.ibs.it/images/0602561144836_0_0_536_0_75.jpg'),
+  new Food('Virtus Protein Selection Dog Lattina 400G', 'Virtus soddisfa le esigenze nutrizionali del tuo cane e gatto attraverso una gamma di alimenti', 2.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/266207/virtus-dog-protein-selection-anatra-400g.jpg?v=637755900210570000', new Category('Cani', '<i class="fa-solid fa-dog"></i>'), 400, ['carni e derivati', 'ortaggi', 'additivi']),
+
+  new Food('Natural Trainer Gatto Sterilised Salmone', 'Natural Trainer è un brand che si impegna a offrire alimenti di alta qualità per cani e gatti', 64.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/299364/natural-trainer-gatto-sterilised-salmone-10112328--1-.jpg?v=638482560030700000', new Category('Gatti', '<i class="fa-solid fa-cat"></i>'), 10000, ['pollo fresco', 'riso', 'proteine']),
+
+  new Toy('Fit and Fun Osso', 'L\'osso resistente ha un nucleo durevole e multistrato che offre un sacco di divertimento', 1.75, 'https://arcaplanet.vtexassets.com/arquivos/ids/281464/c2a831078de9fddbb189ca472566262daaa24c9e_1337376__de_DE__F_F_Spielzeug.jpg?v=638128356559000000', new Category('Cani', '<i class="fa-solid fa-dog"></i>'), 'Rumoroso e divertente', '15X5cm'),
+
+  new Toy('Frisbee in Gomma Naturale', 'Il gioco frisbee di Trixie realizzato in gomma naturale ha tutte le caratteristiche per diventare il gioco preferito del tuo cane', 4.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/270017/trixie-frisbee-in-gomma-naturale-da-18-cm-blu-1.jpg?v=637840814234100000', new Category('Cani', '<i class="fa-solid fa-dog"></i>'), 'Divertente', '18cm'),
+
+  new Accessory('Ciotola Modern Bianca', 'Ciotola per cani e gatti in ceramica di colore Bianco con supporto in bambù ad altezza rialzata.' , 13.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/276599/luna-e-teo-ciotola-modern-bianca.jpg?v=638034341429300000', new Category('Gatti', '<i class="fa-solid fa-cat"></i>'), '850ml' ),
+
+  new Accessory('Cappotto Impermeabile Montreal Grigio', 'Il cappotto impermeabile per cani Montreal Grigio, è il prodotto ideale per proteggere dal freddo il tuo cane.' , 19.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/262475/yes-cappotto-impermeabile-montreal-grigio.jpg?v=637672258747400000', new Category('Cani', '<i class="fa-solid fa-dog"></i>'), '35cm' )
+
+
 ];
