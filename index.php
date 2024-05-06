@@ -1,8 +1,10 @@
 <?php
 
-require_once __DIR__ . '/Models/Category.php';
-require_once __DIR__ . '/Models/Subcategory.php';
 require_once __DIR__ . '/Models/Product.php';
+require_once __DIR__ . '/Models/Category.php';
+require_once __DIR__ . '/Models/Food.php';
+require_once __DIR__ . '/Models/Toy.php';
+require_once __DIR__ . '/Models/Accessory.php';
 require_once __DIR__ . '/assets/data/db.php';
 require_once __DIR__ . '/partials/head.php'
 
@@ -47,8 +49,7 @@ require_once __DIR__ . '/partials/head.php'
                       <p class="card-text"><?php echo $product->description ?></p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item bg-body-secondary"><strong>Categoria: </strong><?php echo $product->animal ?></li>
-                      <li class="list-group-item bg-body-secondary"><strong>Tipo: </strong><?php echo $product->type ?></li>
+                      <li class="list-group-item bg-body-secondary"><strong>Categoria: </strong><?php echo $product->category->name ?><?php echo $product->category->icon ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Prezzo: </strong>&euro; <?php echo number_format($product->price, 2, ',') ?></li>
                     </ul>
                   </div>

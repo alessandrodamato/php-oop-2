@@ -1,11 +1,15 @@
 <?php
 
-class Category {
+class Category{
 
-  public $animal;
+  public $name;
+  public $icon;
 
-  public function __construct(string $_animal) {
-    $this->animal = $_animal;
+  public function __construct(string $_name, string $_icon) {
+
+    $this->name = $_name;
+    $this->icon = $_icon;
+
   }
 
 }
