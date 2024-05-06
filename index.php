@@ -8,6 +8,8 @@ require_once __DIR__ . '/Models/Accessory.php';
 require_once __DIR__ . '/assets/data/db.php';
 require_once __DIR__ . '/partials/head.php';
 
+// ho utilizzato la logica simile a quella della correzione in quanto totalmente diversa dalla mia (sbagliata)
+
 $foods = array_filter($db, fn($product)=> get_class($product) === 'Food');
 
 $toys = array_filter($db, fn($product)=> get_class($product) === 'Toy');
