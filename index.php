@@ -5,6 +5,7 @@ require_once __DIR__ . '/Models/Subcategory.php';
 require_once __DIR__ . '/Models/Product.php';
 require_once __DIR__ . '/assets/data/db.php';
 require_once __DIR__ . '/partials/head.php'
+
 ?>
 
 <body>
