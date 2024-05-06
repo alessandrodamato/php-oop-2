@@ -11,7 +11,7 @@ $db = [
 
   new Accessory('Ciotola Modern Bianca', 'Ciotola per cani e gatti in ceramica di colore Bianco con supporto in bambù ad altezza rialzata.' , 13.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/276599/luna-e-teo-ciotola-modern-bianca.jpg?v=638034341429300000', new Category('Gatti', '<i class="fa-solid fa-cat"></i>'), '850ml'),
 
-  new Accessory('Cappotto Impermeabile Montreal Grigio', 'Il cappotto impermeabile per cani Montreal Grigio, è il prodotto ideale per proteggere dal freddo il tuo cane.' , 19.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/262475/yes-cappotto-impermeabile-montreal-grigio.jpg?v=637672258747400000', new Category('Cani', '<i class="fa-solid fa-dog"></i>'), '35cm')
+  new Accessory('Cappotto Impermeabile Montreal Grigio', 'Il cappotto impermeabile per cani Montreal Grigio, è il prodotto ideale per proteggere dal freddo il tuo cane.' , 19.99 , 'https://arcaplanet.vtexassets.com/arquivos/ids/262475/yes-cappotto-impermeabile-montreal-grigio.jpg?v=637672258747400000', new Category('Cani', '<i class="fa-solid fa-dog"></i>'), '35cm')
 
 
 ];

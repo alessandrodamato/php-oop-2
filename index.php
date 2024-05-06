@@ -6,6 +6,7 @@ require_once __DIR__ . '/Models/Food.php';
 require_once __DIR__ . '/Models/Toy.php';
 require_once __DIR__ . '/Models/Accessory.php';
 require_once __DIR__ . '/assets/data/db.php';
+require_once __DIR__ . '/partials/head.php';
 
 $foods = array_filter($db, fn($product)=> get_class($product) === 'Food');
 
@@ -30,7 +31,13 @@ foreach($accessories as $item){
   }
 }
 
-require_once __DIR__ . '/partials/head.php';
+// se nella funzione setName inseriamo al posto di 'prova' un nome minore di 4 caratteri, otteniamo l'errore non fatale causato da try/catch
+try{
+  $prova = new Food('Virtus Protein Selection Dog Lattina 400G', 'Virtus soddisfa le esigenze nutrizionali del tuo cane e gatto attraverso una gamma di alimenti', 2.99, 'https://arcaplanet.vtexassets.com/arquivos/ids/266207/virtus-dog-protein-selection-anatra-400g.jpg?v=637755900210570000', new Category('Cani', '<i class="fa-solid fa-dog"></i>'), 400, ['carni e derivati', 'ortaggi', 'additivi']);
+  $prova->setName('prova');
+} catch(Exception $e){
+  var_dump($e->getMessage());
+}
 
 ?>
 
@@ -74,7 +81,7 @@ require_once __DIR__ . '/partials/head.php';
                       <p class="card-text"><?php echo $item->description ?></p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item bg-body-secondary"><strong>Prezzo: </strong>&euro; <?php echo number_format($item->price, 2, ',') ?></li>
+                      <li class="list-group-item bg-body-secondary"><strong>Prezzo: </strong>&euro; <?php echo number_format($item->getPrice(), 2, ',') ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Peso: </strong><?php echo $item->weight ?>gr</li>
                       <li class="list-group-item bg-body-secondary"><strong>Categoria: </strong><?php echo $item->category->name ?> <?php echo $item->category->icon ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Ingredienti: </strong>
@@ -123,7 +130,7 @@ require_once __DIR__ . '/partials/head.php';
                       <p class="card-text"><?php echo $item->description ?></p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item bg-body-secondary"><strong>Prezzo: </strong>&euro; <?php echo number_format($item->price, 2, ',') ?></li>
+                      <li class="list-group-item bg-body-secondary"><strong>Prezzo: </strong>&euro; <?php echo number_format($item->getPrice(), 2, ',') ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Dimensioni: </strong><?php echo $item->size ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Categoria: </strong><?php echo $item->category->name ?> <?php echo $item->category->icon ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Dettagli: </strong><?php echo $item->features ?></li>
@@ -167,7 +174,7 @@ require_once __DIR__ . '/partials/head.php';
                       <p class="card-text"><?php echo $item->description ?></p>
                     </div>
                     <ul class="list-group list-group-flush">
-                      <li class="list-group-item bg-body-secondary"><strong>Prezzo: </strong>&euro; <?php echo number_format($item->price, 2, ',') ?></li>
+                      <li class="list-group-item bg-body-secondary"><strong>Prezzo: </strong>&euro; <?php echo number_format($item->getPrice(), 2, ',') ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Dimensioni: </strong><?php echo $item->size ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Categoria: </strong><?php echo $item->category->name ?> <?php echo $item->category->icon ?></li>
                       <li class="list-group-item bg-body-secondary"><strong>Materiali: </strong><?php $item->getFormatMaterial() ?></li>
